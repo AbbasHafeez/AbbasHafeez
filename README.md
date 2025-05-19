@@ -16,15 +16,19 @@ I’m a results-driven developer who loves turning complex ideas into elegant, s
 
 ## 🐍 Snake on Contribution Graph
 <div align="center">
-  <!-- Dark mode -->
-  <a href="https://github.com/settings/appearance#gh-dark-mode-only">
-    <img src="https://raw.githubusercontent.com/AbbasHafeez/AbbasHafeez/output/github-contribution-grid-snake-dark.svg" width="100%" alt="snake" />
-  </a>
-  <!-- Light mode -->
-  <a href="https://github.com/settings/appearance#gh-light-mode-only">
-    <img src="https://raw.githubusercontent.com/AbbasHafeez/AbbasHafeez/output/github-contribution-grid-snake.svg" width="100%" alt="snake" />
-  </a>
+
+<!-- Dark-mode image -->
+<a href="https://github.com/settings/appearance#gh-dark-mode-only">
+  <img src="https://raw.githubusercontent.com/AbbasHafeez/AbbasHafeez/output/dist/github-contribution-grid-snake-dark.svg" width="100%" />
+</a>
+
+<!-- Light-mode image -->
+<a href="https://github.com/settings/appearance#gh-light-mode-only">
+  <img src="https://raw.githubusercontent.com/AbbasHafeez/AbbasHafeez/output/dist/github-contribution-grid-snake.svg" width="100%" />
+</a>
+
 </div>
+
 
 ---
 
