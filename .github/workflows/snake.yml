@@ -1,10 +1,14 @@
 name: Generate Snake
 
+# ── 0️⃣  Give the workflow write access so it can push ────────────────
+permissions:
+  contents: write          # ← required for git push
+
 on:
-  # 1) Run every day at midnight UTC
+  # 1) Run every night at 00:00 UTC
   schedule:
     - cron: "0 0 * * *"
-  # 2) …and also each time you push anything
+  # 2) …and whenever you push to any branch
   push: {}
 
 jobs:
@@ -12,23 +16,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ── 1️⃣  Checkout your repo ───────────────────────────────────────────────
+      # ── 1️⃣  Checkout the repo ───────────────────────────────────────
       - uses: actions/checkout@v3
 
-      # ── 2️⃣  Generate the SVG(s) with Platane/snk v3 ─────────────────────────
+      # ── 2️⃣  Generate the SVG(s) ─────────────────────────────────────
       - name: Generate snake animation
         uses: Platane/snk@v3
         with:
-          github_user_name: AbbasHafeez          # ← your GitHub username
+          github_user_name: AbbasHafeez      # ← your exact username
           outputs: |
             dist/github-contribution-grid-snake.svg
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark
 
-      # ── 3️⃣  Commit the SVGs to a branch called “output” ─────────────────────
+      # ── 3️⃣  Commit & push to the "output" branch ────────────────────
       - name: Commit & push
         run: |
           git config --global user.name  "github-actions[bot]"
-          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add dist/*
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+          # create/update the output branch
+          git fetch origin output || true
+          git checkout -B output
+
+          # copy the freshly generated SVGs from the working tree
+          git add dist/*.svg
           git commit -m "chore: update snake animation" || echo "nothing to commit"
-          git push origin HEAD:output
+
+          # push the branch (creates it the first time, updates thereafter)
+          git push origin output
