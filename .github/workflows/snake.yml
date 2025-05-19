@@ -1,0 +1,34 @@
+name: Generate Snake
+
+on:
+  # 1) Run once every day at midnight UTC
+  schedule:
+    - cron: "0 0 * * *"
+  # 2) …and also run any time you push to the repository
+  push: { }
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1 – Checkout your repo code
+      - uses: actions/checkout@v3
+
+      # Step 2 – Generate the snake SVG
+      - name: Generate the snake
+        uses: Platane/snk@v2            # action that draws the snake
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          output_file: dist/github-contribution-grid-snake.svg
+          svg_out_path: dist            # folder where the file will live
+          background_color: "#18181b"   # dark mode background
+
+      # Step 3 – Commit the generated file to a branch called "output"
+      - name: Commit & push
+        run: |
+          git config --global user.name  "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add dist/github-contribution-grid-snake.svg
+          git commit -m "chore: update snake" || echo "no changes"
+          git push origin HEAD:output
