@@ -1,14 +1,13 @@
 # 👋 Hi, I’m **Abbas Hafeez**
 
 🚀 **Software Engineer | Full-Stack & Data-Science Enthusiast | Open-Source Contributor** 
+
 ### 🚀 Portfolio  
+
 <div align="center">
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/79ecf270-c663-4ef2-9cd2-6d8cb6f9a6a4/deploy-status)](https://abbashafeez.netlify.app)  
-🌐 **Live Demo**: [abbashafeez.netlify.app](https://abbashafeez.netlify.app)
-
+  <img src="https://www.netlify.com/v3/img/components/logomark.png" alt="Netlify Logo" width="60" />
+  🌐 **Live Demo**: [abbashafeez.netlify.app](https://abbashafeez.netlify.app)
 </div>
-
 
 I’m a results-driven developer who loves turning complex ideas into elegant, scalable software. From crafting MERN applications to diving into data-science projects, I thrive on learning, building, and collaborating. My goal is to create impactful solutions that push technology forward.
 
