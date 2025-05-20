@@ -3,10 +3,11 @@
 🚀 **Software Engineer | Full-Stack & Data-Science Enthusiast | Open-Source Contributor** 
 
 ### 🚀 Portfolio  
-
+🌐 **Live Demo**: [abbashafeez.netlify.app](https://abbashafeez.netlify.app)
 <div align="center">
-  <img src="https://www.netlify.com/v3/img/components/logomark.png" alt="Netlify Logo" width="60" />
-  🌐 **Live Demo**: [abbashafeez.netlify.app](https://abbashafeez.netlify.app)
+  <a href="https://abbashafeez.netlify.app" target="_blank">
+    <img src="https://www.netlify.com/v3/img/components/logomark.png" alt="Netlify Logo" width="60" />
+  </a>
 </div>
 
 I’m a results-driven developer who loves turning complex ideas into elegant, scalable software. From crafting MERN applications to diving into data-science projects, I thrive on learning, building, and collaborating. My goal is to create impactful solutions that push technology forward.
